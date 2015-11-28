@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="edu.pku.assistant.UserInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:padding="24dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@android:color/holo_blue_light"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumbnail"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="24dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold"
+                android:text="@string/name"/>
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumbnail"
+            android:layout_marginTop="48dp"
+            android:paddingLeft="24dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold"
+                android:text="userid"/>
+            <TextView
+                android:id="@+id/userid"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="123"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabHost">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:id="@+id/tabblog"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <ListView
+                        android:id="@+id/bloglist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabstate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <ListView
+                        android:id="@+id/statelist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

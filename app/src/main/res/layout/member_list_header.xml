@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/card_header_outer"
+    android:clickable="false"
+    android:focusable="false">
+
+    <LinearLayout
+        android:id="@+id/outer_frame"
+        style="@style/card_header_inner"
+        android:clickable="false"
+        android:focusable="false">
+
+        <TextView
+            android:id="@android:id/title"
+            style="@style/card_header_title"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@android:id/content"
+            style="@style/card_header_summary"
+            android:clickable="false"
+            android:focusable="false" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@android:id/button1"
+        style="@style/header_button"
+        android:text="@string/add_new"/>
+
+</RelativeLayout>

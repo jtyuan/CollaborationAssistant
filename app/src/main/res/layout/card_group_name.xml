@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+style="@style/card_outer_frame"
+    android:descendantFocusability="afterDescendants">
+<RelativeLayout android:id="@android:id/widget_frame"
+    style="@style/card_inner_frame"
+    android:descendantFocusability="afterDescendants">
+
+    <RelativeLayout android:id="@+id/titleFrame" style="@style/card_title_frame">
+        <TextView android:id="@android:id/title" style="@style/card_title"/>
+    </RelativeLayout>
+
+    <EditText style="@style/card_edit_text"
+        android:hint="输入小组名称"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_group_name"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/titleFrame"/>
+</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff0f0f0">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff33b5e5"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/group_image"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/head"
+                    app:border_width="2dp"
+                    app:border_color="#ff33b5e5"/>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/group_title"
+                        android:textColor="@color/white"
+                        android:layout_alignParentLeft="true"
+                        android:id="@+id/tv_group_name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/memnum"
+                        android:textColor="@color/white"
+                        android:id="@+id/tv_member_num_title"
+                        android:layout_below="@+id/tv_group_name"
+                        android:layout_alignParentLeft="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/creator"
+                        android:textColor="@color/white"
+                        android:id="@+id/tv_creator_title"
+                        android:layout_below="@+id/tv_member_num_title"
+                        android:layout_alignParentLeft="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/create_date"
+                        android:textColor="@color/white"
+                        android:id="@+id/tv_create_date_title"
+                        android:layout_below="@+id/tv_creator_title"
+                        android:layout_alignParentLeft="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/memnum_val"
+                        android:id="@+id/tv_member_num"
+                        android:gravity="right"
+                        android:textColor="@color/white"
+                        android:layout_toRightOf="@+id/tv_member_num"
+                        android:layout_below="@+id/tv_group_name"
+                        android:layout_alignParentRight="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/creator_name"
+                        android:id="@+id/tv_creator"
+                        android:gravity="right"
+                        android:textColor="@color/white"
+                        android:layout_below="@+id/tv_member_num"
+                        android:layout_alignRight="@+id/tv_member_num" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/create_date_val"
+                        android:id="@+id/tv_create_date"
+                        android:gravity="right"
+                        android:textColor="@color/white"
+                        android:layout_below="@+id/tv_creator"
+                        android:layout_alignRight="@+id/tv_member_num" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <com.afollestad.cardsui.CardListView
+                android:id="@+id/card_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#fff0f0f0"
+                android:layout_above="@+id/rl_buttons">
+            </com.afollestad.cardsui.CardListView>
+
+            <LinearLayout
+                android:id="@+id/rl_buttons"
+                android:layout_alignParentBottom="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/action_confirm_date"
+                    bootstrapbutton:bb_text_gravity="center"
+                    bootstrapbutton:bb_icon_right="fa-chevron-circle-left"
+                    bootstrapbutton:bb_icon_left="fa-chevron-circle-right"
+                    bootstrapbutton:bb_type="primary"
+                    android:layout_weight=".5"
+                    android:id="@+id/button_confirm" />
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_confirm_date"
+                    bootstrapbutton:bb_text_gravity="center"
+                    bootstrapbutton:bb_icon_right="fa-chevron-circle-left"
+                    bootstrapbutton:bb_icon_left="fa-chevron-circle-right"
+                    bootstrapbutton:bb_type="danger"
+                    android:layout_weight=".5"
+                    android:id="@+id/button_cancel" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

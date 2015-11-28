@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:id="@+id/contacts_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <ImageView
+            android:id="@+id/thumbnail_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/holo_blue_light"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumbnail_image"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:text="单旭东"/>
+        <Button
+            android:id="@+id/befriend"
+            android:layout_width="64dp"
+            android:layout_height="28dp"
+            android:focusable="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/invite"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_add_selector" />
+     </RelativeLayout>
+</LinearLayout>

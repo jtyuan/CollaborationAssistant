@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cn.edu.pku.eecs.start_time.MemberManager" >
+    <item android:id="@+id/action_add_person"
+        android:title="Add"
+        android:icon="@drawable/ic_action_add_person"
+        android:showAsAction="ifRoom" />
+</menu>

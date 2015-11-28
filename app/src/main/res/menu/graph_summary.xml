@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/actionToggleValues"
+        android:title="Toggle Values">
+    </item>
+    <item
+        android:id="@+id/actionToggleHighlight"
+        android:title="Toggle Highlight">
+    </item>
+    <item
+        android:id="@+id/actionToggleHighlightArrow"
+        android:title="Toggle Highlight Arrow">
+    </item>
+
+    <item
+        android:id="@+id/actionToggleAdjustXLegend"
+        android:title="Toggle AdjustXLegend">
+    </item>
+
+</menu>
